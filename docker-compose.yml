@@ -1,0 +1,21 @@
+version: "3.1"
+
+services:
+  server:
+    image: dictionary_server
+    build:
+      context: ./server/
+    ports:
+      - "8081:8080"
+
+  frontend:
+    image: dictionary_client
+    build:
+      context: ./client/
+    links:
+      - "server:server"
+    ports:
+      - "3001:3000"
+    depends_on:
+      - server
+

@@ -1,0 +1,20 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+#add-word-button, #reset-button{
+  margin: 3px 10px;
+}
+
+.empty-items-message{
+  padding:0 20px;
+}
+
+.list-items{
+  margin: 10px 10px;
+  max-height: 150px;
+  overflow-y: auto;
+
+}
